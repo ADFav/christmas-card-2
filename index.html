@@ -1,0 +1,42 @@
+<html>
+ <head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+ </head>
+ <body>
+   <div id="bg" ng-app="snowflakes" ng-controller="ngSnow" ng-class="day ? 'day' : 'night'">
+    <span ng-repeat="flake in flakes track by $index" ng-style="flake.move ? flake.init : flake.final">
+    *
+    </span>
+    <div id="house-body"></div>
+    <div id="door"></div>
+    <div class="window" id="window-1"></div>
+    <div class="window" id="window-2"></div>
+    <div class="window" id="window-3"></div>
+    <div class="window" id="window-4"></div>
+    <div class="window" id="window-5"></div>
+    <div class="window" id="window-6"></div>
+    <div class="window" id="window-7"></div>
+    <div class="window" id="window-8"></div>
+    <div class="window" id="window-9"></div>
+    <div id="garage-body"></div>
+    <div class="garage-door" id="garage-door-1"></div>
+    <div class="garage-door" id="garage-door-2"></div>
+    <div class="house-roof" ng-class="snowCover ? 'snowCovered' : none"></div>
+    <div class="garage-roof" ng-class="snowCover ? 'snowCovered' : none"></div>
+    <div class="lawn" ng-class="snowCover ? 'snowCovered' : none"></div>
+    <div class="driveway" ng-class="snowCover ? 'snowCovered' : none"></div>
+    <div class="walkway-1" ng-class="snowCover ? 'snowCovered' : none"></div>
+    <div class="walkway-2" ng-class="snowCover ? 'snowCovered' : none"></div>
+    <div id="message">
+     <div ng-repeat="line in message track by $index">{{line}}</div>
+     <a href={{link.src}}>{{link.message}}</a>     
+    </div>
+    <div id="message-backing">
+     <div ng-repeat="line in message track by $index">{{line}}</div>
+     <a href={{link.src}}>{{link.message}}</a>
+    </div>
+   </div>
+ </body>
+</html>
