@@ -29,10 +29,9 @@ angular.module('snowflakes', [])
      move($scope.flakes[Math.floor(Math.random() * $scope.flakes.length)]);
     }, 250);
     
-    var xmas = new Date(2016,11,25,6,0,0,0);
+    var xmas = new Date(2016,11,20,6,0,0,0);
     var now  = new Date();
-    var target = new Date(2016,11,22,22,14,0,0);
-    $scope.message = (now < xmas) ? "No Peeking".split("\n") : "Dear Phil,\n\nMerry Christmas! Make sure you open the other gift first\n\nLove,\nAndrew & Ellen".split("\n");
+    $scope.message = (now < xmas) ? "No Peeking".split("\n") : "Dear Phil,\n\nMerry Christmas! \nMake sure you open the other gift first\n\nLove,\nAndrew & Ellen".split("\n");
     $scope.link = (now < xmas) ? {message: "", src: ""} : {message: "P.S. - here's a bonus gift", src: "https://docs.google.com/document/d/1ZMk2Sfqh8tit6haGT3eufZATbIyM0-GT31SM751tgCw/edit?usp=sharing"};
     $scope.snowCover = false;
     $scope.day = new Date().getHours() > 6 && new Date().getHours() < 17;

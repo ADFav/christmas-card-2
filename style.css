@@ -196,14 +196,14 @@ span {
 }
 
 #message {
-  left: 10%;
+  right: 10%;
   top: 10%;
   z-index: 3;
 }
 
 #message-backing{
   z-index: 2;
-  left: 10.4%; 
+  right: 9.6%; 
   top: 10.4%;
 }
 
@@ -211,6 +211,7 @@ span {
   background-color: transparent;
   position : absolute;
   transform: rotate(-30deg);
+  width : 40%;
 }
 
 #message div, #message-backing div {
@@ -231,11 +232,11 @@ span {
 }
 
 #message a{
-  color : blue;
+  color : white;
 }
 
 #message-backing a{
-  color: white;
+  color: blue;
 }
 
 .snowCovered{
